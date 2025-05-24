@@ -10,6 +10,10 @@ workflows:
       - name: Set up local properties
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+      - name: Set up gradle.properties
+        script: |
+          echo "android.useAndroidX=true" >> "$CM_BUILD_DIR/gradle.properties"
+          echo "android.enableJetifier=true" >> "$CM_BUILD_DIR/gradle.properties"
       - name: Add execution permission to gradlew
         script: |
           chmod +x ./gradlew
