@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/capture_status_default"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/packetCountTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/packet_count_default"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
+
+    <Button
+        android:id="@+id/startStopButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/start_capture"
+        app:layout_constraintEnd_toStartOf="@+id/clearButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/configPathTextView" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/clear_logs"
+        app:layout_constraintEnd_toStartOf="@+id/exportButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/startStopButton"
+        app:layout_constraintTop_toTopOf="@+id/startStopButton" />
+
+    <Button
+        android:id="@+id/exportButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/export_logs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/clearButton"
+        app:layout_constraintTop_toTopOf="@+id/clearButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/packetsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startStopButton" />
+        
+    <Button
+        android:id="@+id/selectConfigButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_config"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/packetCountTextView"
+        android:layout_marginTop="16dp" />
+        
+    <TextView
+        android:id="@+id/configPathTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/no_config_selected"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@+id/selectConfigButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/selectConfigButton"
+        app:layout_constraintBottom_toBottomOf="@+id/selectConfigButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

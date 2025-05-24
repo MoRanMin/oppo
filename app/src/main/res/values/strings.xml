@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">抓包工具</string>
+    <string name="capture_status">状态: %1$s</string>
+    <string name="capture_status_default">状态: 已停止</string>
+    <string name="status_running">运行中</string>
+    <string name="status_stopped">已停止</string>
+    <string name="start_capture">开始抓包</string>
+    <string name="stop_capture">停止抓包</string>
+    <string name="clear_logs">清除日志</string>
+    <string name="export_logs">导出日志</string>
+    <string name="packet_count">已捕获 %1$d 个数据包</string>
+    <string name="packet_count_default">已捕获 0 个数据包</string>
+    <string name="vpn_permission_required">需要VPN权限才能抓包</string>
+    <string name="select_config">选择配置</string>
+    <string name="no_config_selected">未选择配置文件</string>
+</resources> 
